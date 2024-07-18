@@ -1,30 +1,39 @@
 import React from "react";
 import { Text } from '@/components';
 import clsx from 'clsx';
+import { ExchangeRatesItems } from "@/modules/exchange/itemEntity";
 
 
-export default function HomePage() {
+export default function HomePage(props: {
+  exchangeRates: ExchangeRatesItems | null
+}) {
+  const { exchangeRates } = props
+  
   return (
     <main 
       className={clsx(
         'relative',
         'w-full',
-        'justify-center'
+        'justify-center',
+        'p-10'
       )}>
-      <Text textType="heading" className={clsx('text-4xl')}>Exchange Rates</Text>
+      <Text textType="heading" className={clsx('text-3xl')}>Exchange Rates</Text>
       <br/>
       <section>
-        <div className={clsx('flex', 'flex-col')}>
-          <Text textType="subtitle" className={clsx('text-sm', 'text-gray-500')}>
-            1 Rupiah Indonesia sama dengan
-          </Text>
-          <Text textType="subtitle" className={clsx('text-sm', 'text-gray-500')}>
-            0,000000 Dolar
-          </Text>
-          <Text textType="subtitle" className={clsx('text-sm', 'text-gray-500')}>
-            Amerika serikat
-          </Text>
+        <div className="p-2 shadow-lg w-[300px]">
+          <div className={clsx('flex', 'flex-col')}>
+            <Text textType="subtitle" className={clsx('text-sm', 'text-gray-500')}>
+              1 {exchangeRates?.["2. From_Currency Name"]} equals
+            </Text>
+            <Text textType="subtitle" className={clsx('text-xl', 'text-black')}>
+            {exchangeRates?.["5. Exchange Rate"]} {exchangeRates?.["4. To_Currency Name"]}
+            </Text>
+          </div>
+          <div className="mt-10">
+            <Text textType="subtitle" className="text-xs text-gray-400">Last Refreshed {exchangeRates?.["6. Last Refreshed"]}</Text>
+          </div>
         </div>
+     
       </section>
       <section></section>
     </main>
