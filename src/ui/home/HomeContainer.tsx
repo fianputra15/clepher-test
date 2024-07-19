@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from "react";
 import HomePage from "./HomePage";
-import { ExchangeReponse, PayloadExchangeRates, ExchangeRatesItems } from "@/modules/exchange/itemEntity";
+import { ExchangeReponse, PayloadExchangeRates } from "@/modules/exchange/itemEntity";
 import { getExchangeRates } from "@/modules/exchange/itemSevices";
-import { EXCHANGE_SAMPLE_RESPONSE } from "@/modules/exchange/samples";
 
 export default function HomeContainer(){
     const [isLoading, setIsLoading] = useState<boolean>(false);

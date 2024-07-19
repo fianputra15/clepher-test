@@ -61,7 +61,6 @@ export default function HomePage(props: {
           </div>
         )}
       </section>
-      <section></section>
     </main>
   );
 }
