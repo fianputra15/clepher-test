@@ -1,6 +1,6 @@
 # Clepher - Exchange Rates
 
-Clepher is a web application built using latest version (v14.2.5) Next.js to display information about currency exchange rates. This project is written in TypeScript, uses Tailwind CSS for styling, and Jest for unit testing. It requires Node.js version 20 or higher.
+Exchange Rates is a web application built using latest version (v14.2.5) Next.js to display information about currency exchange rates. This project is written in TypeScript, uses Tailwind CSS for styling, and Jest for unit testing. It requires Node.js version 20 or higher.
 
 ## Requirements
 
