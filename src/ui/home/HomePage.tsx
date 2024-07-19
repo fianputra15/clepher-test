@@ -17,11 +17,9 @@ export default function HomePage(props: {
       <br />
       <section>
         {isLoading ? (
-          <div className="max-w-sm mx-auto">
-            <div className={clsx('shimmer','h-40', 'mb-4', 'rounded')}></div>
-          </div>
+          <div className={clsx('shimmer','h-40', 'mb-4', 'rounded', 'w-[300px]')}></div>
         ) : (
-          <div className="p-2 shadow-lg w-[300px]">
+          <div className={clsx('shadow-lg', 'w-[300px]', 'p-2')}>
             <div className={clsx("flex", "flex-col")}>
               <Text
                 textType="subtitle"
